@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    background: LightSteelBlue !important;
+    text-align: center;
+}
+h1{
+    text-align: center;
+}
+form{
+    width: 50%;
+    margin: 0 auto;
+}
+.qr-img{
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.qr-img img{
+    width: 100%;
+}
+
+.button {
+    color: white;
+    background: blue;
+}

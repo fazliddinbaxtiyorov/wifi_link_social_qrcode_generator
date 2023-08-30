@@ -1,0 +1,19 @@
+{% extends "generate/base.html" %}
+{% load crispy_forms_tags %}
+{% block heading %}
+    <title>Social Page</title>
+{% endblock heading %}
+
+{% block content %}
+    <h1>Social User Generator</h1>
+    <form method="POST">
+    {% csrf_token %}
+        {{ form }}
+        <button class="button" type="submit">Submit</button>
+    </form>
+    <div class="qr-img">
+        {% if img_name %}
+            <img src="/media/{{ img_name }}" alt="social_qr_code">
+        {% endif %}
+    </div>
+{% endblock content %}

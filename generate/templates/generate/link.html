@@ -1,0 +1,17 @@
+{% extends "generate/base.html" %}
+{% load crispy_forms_tags %}
+{% block heading %}
+    <title>Links Page</title>
+{% endblock heading %}
+
+{% block content %}
+    <h1>Links Generate</h1>
+    <form method="POST">
+    {% csrf_token %}
+        {{ form }}
+        <button  class="button" type="submit">Submit</button>
+    </form>
+    <div class="qr-img">
+        <img src="/media/{{ img_name }}" alt="link_qr_code">
+    </div>
+{% endblock content %}

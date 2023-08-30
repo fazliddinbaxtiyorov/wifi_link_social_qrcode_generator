@@ -1,0 +1,20 @@
+{% extends "generate/base.html" %}
+{% load crispy_forms_tags %}
+
+ {% block heading %}
+    <title>QR code generator</title>
+ {% endblock heading%}
+{% block content %}
+        <h1>Wifi QR Code Generator</h1>
+        <form method="post">
+            {% csrf_token %}
+            {{ form|crispy }}
+            <button class="button" type="submit">Generate</button>
+        </form>
+
+        <div class="qr-img">
+            {% if img_name %}
+                <img src="/media/{{ img_name }}" alt="wifi_qr_code">
+            {% endif %}
+        </div>
+{% endblock content%}
